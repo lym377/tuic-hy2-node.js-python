@@ -31,6 +31,6 @@ curl -Ls https://raw.githubusercontent.com/eishare/tuic-hy2-node.js-python/main/
 
 ## wispbyte免费服务器VPS：
 
-[(wispbyte)https://wispbyte.com/]
+[wispbyte(https://wispbyte.com/)]
 
 ## 命令编辑器里输入：```bash``` 点击保存
