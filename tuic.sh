@@ -118,7 +118,17 @@ EOF
 
 # ========== 获取公网IP ==========
 get_server_ip() {
-  curl -s --connect-timeout 3 https://api64.ipify.org || echo "127.0.0.1"
+  if [[ -n "${SERVER_IP:-}" ]]; then
+    echo "$SERVER_IP"
+    return
+  fi
+
+  if [[ -n "${PTERODACTYL_SERVER_IP:-}" ]]; then
+    echo "$PTERODACTYL_SERVER_IP"
+    return
+  fi
+
+  echo "127.0.0.1"
 }
 
 # ========== 生成TUIC链接 ==========
@@ -162,3 +172,5 @@ main() {
 }
 
 main "$@"
+
+
